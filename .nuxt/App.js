@@ -3,6 +3,8 @@ import NuxtLoading from './components/nuxt-loading.vue'
 
 import '../node_modules/bulma/css/bulma.css'
 
+import '../assets/style.css'
+
 import _6f6c098b from './layouts/default.vue'
 
 const layouts = { "_default": _6f6c098b }

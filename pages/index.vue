@@ -1,6 +1,8 @@
 <template lang="html">
   <div class="container">
-    <h1 class="title">Album List</h1>
+    <header>
+      <h1 class="title">Album List</h1>
+    </header>
     <div class="columns is-multiline">
       <AlbumCard :album="album" v-for="album in albums" :key="album.id" />
     </div>
@@ -31,6 +33,3 @@ export default {
   }
 }
 </script>
-
-<style lang="css" scoped>
-</style>
