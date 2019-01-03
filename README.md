@@ -12,7 +12,7 @@ Cuando hablamos de apps universales, hablamos de apps que se ejecutan desde cual
 
 `npm run dev`
 
-# Dummy Data
+## Dummy Data
 
 - [Typicode Dummy Data](http://jsonplaceholder.typicode.com)
 
