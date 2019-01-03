@@ -26,7 +26,6 @@ export default {
     axios.get(`${env.endpoint}/albums`)
     .then(res => {
       // client and also displayed on server side
-      // console.log(res)
       this.albums = res.data
     })
   }
