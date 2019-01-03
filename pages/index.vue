@@ -1,5 +1,10 @@
 <template lang="html">
-  <h1>Hello, World</h1>
+  <div class="">
+    <h1>Album List</h1>
+    <div v-for="album in albums" :key="album.id">
+      <h4>{{album.title}}</h4>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -9,7 +14,7 @@ export default {
   name: 'IndexPage', // component name
   data(){
     return {
-      albums: {}
+      albums: []
     }
   },
   created(){
@@ -18,6 +23,7 @@ export default {
     .then(res => {
       // client and also displayed on server side
       console.log(res)
+      this.albums = res.data
     })
   }
 }
