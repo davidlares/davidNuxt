@@ -1,0 +1,11 @@
+{
+  "name": "davidlares-nuxt-spa",
+  "version": "1.0.0",
+  "description": "Nuxt SPA with VueJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
+  "author": "David E Lares S",
+  "license": "MIT"
+}
