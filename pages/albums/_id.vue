@@ -1,7 +1,9 @@
 <template lang="html">
-  <div>
-    <a href="#">Back</a>
-    <h2>{{album.title}}</h2>
+  <div class="container">
+    <header>
+      <nuxt-link to="/">Back</nuxt-link>
+      <h2>{{album.title}}</h2>
+    </header>
     <div class="columns is-multiline">
       <div class="column is-one-quarter" v-for="photo in photos" :key="photo.id">
         <img :src="photo.url" :alt="photo.title">
@@ -22,16 +24,12 @@ export default {
       photos: []
     }
   },
-  created(){
-    let id = this.$route.params.id
-    axios.get(`${env.endpoint}/albums/${id}`)
-    .then(album => {
-      this.album = album.data
-    })
-    axios.get(`${env.endpoint}/albums/${id}/photos`)
-    .then(photos => {
-      this.photos = photos.data
-    })
+  created: async function(){
+    // refactoring async methods
+    let albumResponse = await axios.get(`${env.endpoint}/albums/${this.$route.params.id}`);
+    this.album = albumResponse.data
+    let photoResponse = await axios.get(`${env.endpoint}/albums/${this.$route.params.id}/photos`)
+    this.photos = photoResponse.data
   }
 }
 </script>
@@ -40,7 +38,8 @@ export default {
   .container {
     text-align: center;
   }
-  .title {
+  header {
     margin-top: 100px;
+    margin-bottom: 100px;
   }
 </style>
