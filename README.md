@@ -12,6 +12,10 @@ Cuando hablamos de apps universales, hablamos de apps que se ejecutan desde cual
 
 `npm run dev`
 
+# Dummy Data
+
+- [Typicode Dummy Data](http://jsonplaceholder.typicode.com)
+
 ## Beneficios de Nuxt
 
   - SSR (server side rendering = se produce todo desde el servidor) desde el inicio
